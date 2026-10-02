@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- cryopod -->
+	<AV_GizmoLabel_Cryopod_Targeting>targeting</AV_GizmoLabel_Cryopod_Targeting> 
+		
+    <AV_GizmoLabel_Cryopod_Cancel>cancel forced action</AV_GizmoLabel_Cryopod_Cancel> 
+    <AV_GizmoDesc_Cryopod_Cancel>cancel the forced netrunning action.</AV_GizmoDesc_Cryopod_Cancel>
+
+    <AV_GizmoLabel_Cryopod_Shield>remote shield</AV_GizmoLabel_Cryopod_Shield> 
+	<AV_GizmoLabel_Cryopod_Shield_Cooldown>remote shield cooldown</AV_GizmoLabel_Cryopod_Shield_Cooldown>
+    <AV_GizmoDesc_Cryopod_Shield>shield a friendly mechanoid, can target the whole map.</AV_GizmoDesc_Cryopod_Shield>
+    <AV_Gizmo_Cryopod_Shieldcooldown>shielding is on cooldown!</AV_Gizmo_Cryopod_Shieldcooldown>
+	
+    <AV_GizmoLabel_Cryopod_Repair>remote repair</AV_GizmoLabel_Cryopod_Repair> 
+    <AV_GizmoDesc_Cryopod_Repair>repair a friendly mechanoid till it is fully repaired or has no energy remaining. Can target the whole map.</AV_GizmoDesc_Cryopod_Repair>
+
+	<AV_GizmoLabel_Cryopod_AIMode>work mode</AV_GizmoLabel_Cryopod_AIMode> 
+    <AV_GizmoDesc_Cryopod_AIMode>choose current netrunning job.</AV_GizmoDesc_Cryopod_AIMode>
+	<AV_GizmoDesc_Cryopod_AIMode_Combat>combat</AV_GizmoDesc_Cryopod_AIMode_Combat>
+	<AV_GizmoDesc_Cryopod_noImplant>missing implant</AV_GizmoDesc_Cryopod_noImplant>
+	<AV_GizmoDesc_Cryopod_noInt>incapable</AV_GizmoDesc_Cryopod_noInt>
+	
+	<AV_GizmoDesc_Cryopod_AIMode_Repair>repair only</AV_GizmoDesc_Cryopod_AIMode_Repair> 	
+	<AV_GizmoDesc_Cryopod_AIMode_Maintenance>maintenance</AV_GizmoDesc_Cryopod_AIMode_Maintenance> 	
+	<AV_GizmoDesc_Cryopod_AIMode_Research>research</AV_GizmoDesc_Cryopod_AIMode_Research> 	
+	<AV_GizmoMessage_Cryopod_AIMode_NoResearchProj>need an active research project to perform research with the neural interface.</AV_GizmoMessage_Cryopod_AIMode_NoResearchProj> 
+	<AV_GizmoMessage_Cryopod_AIMode_NoIntellect>overseer is incapable of intellectual work.</AV_GizmoMessage_Cryopod_AIMode_NoIntellect> 
+	<AV_GizmoMessage_Cryopod_AIMode_NoRepair>overseer is missing a remote repair implant.</AV_GizmoMessage_Cryopod_AIMode_NoRepair> 
+	
+
+	
+    <AV_GizmoDesc_Cryopod_AIToggle>allow pawn to choose netrunning jobs according to the AI Mode.</AV_GizmoDesc_Cryopod_AIToggle>
+	<AV_GizmoDesc_Cryopod_Action_Idle>idle</AV_GizmoDesc_Cryopod_Action_Idle>
+	<AV_GizmoDesc_Cryopod_Action_Maintenance>maintenance</AV_GizmoDesc_Cryopod_Action_Maintenance>
+	<AV_GizmoDesc_Cryopod_Action_Repair>repair</AV_GizmoDesc_Cryopod_Action_Repair>
+	<AV_GizmoDesc_Cryopod_Action_Disconnect>disconnecting</AV_GizmoDesc_Cryopod_Action_Disconnect>
+	<AV_GizmoDesc_Cryopod_Action_Connect>connecting</AV_GizmoDesc_Cryopod_Action_Connect>
+	<AV_GizmoDesc_Cryopod_Action_Research>researching</AV_GizmoDesc_Cryopod_Action_Research>	
+	<AV_GizmoDesc_Cryopod_Action_Shield>shielding</AV_GizmoDesc_Cryopod_Action_Shield>		
+				
+    <AV_GizmoLabel_Cryopod_Disconnect>disconnect</AV_GizmoLabel_Cryopod_Disconnect> 
+    <AV_GizmoDesc_Cryopod_Disconnect>remotely disconnect to a controled mech. Can target mechs on the whole map.</AV_GizmoDesc_Cryopod_Disconnect>
+
+    <AV_GizmoLabel_Cryopod_Connect>connect</AV_GizmoLabel_Cryopod_Connect> 
+    <AV_GizmoDesc_Cryopod_Connect>remotely connect to a friendly mech. Can target mechs on the whole map.</AV_GizmoDesc_Cryopod_Connect>
+
+    <AV_Message_NoBandwidth>selected mech has to much bandwidth to take over</AV_Message_NoBandwidth>
+	<AV_Message_NoShieldTarget>no mech to shield found</AV_Message_NoShieldTarget>
+
+	<AV_JobString_Cryopod_Idle>netrunning (idle).</AV_JobString_Cryopod_Idle>
+	<AV_JobString_Cryopod_Research>netrunning (researching).</AV_JobString_Cryopod_Research>
+	<AV_JobString_Cryopod_Shield>netrunning (shielding).</AV_JobString_Cryopod_Shield>
+	<AV_JobString_Cryopod_Maintain>netrunning (maintaining).</AV_JobString_Cryopod_Maintain>
+	<AV_JobString_Cryopod_Repair>netrunning (repairing).</AV_JobString_Cryopod_Repair>
+	<AV_JobString_Cryopod_Disconnect>netrunning (disconnecting).</AV_JobString_Cryopod_Disconnect>
+	<AV_JobString_Cryopod_Connect>netrunning (connecting).</AV_JobString_Cryopod_Connect>
+	
+	
+</LanguageData>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+   
+    <!-- buttons -->
+    <AV_SettingsButtonLabel_reset>reset to default</AV_SettingsButtonLabel_reset>
+
+	<!-- slider -->
+	
+    <AV_SettingsSliderLabel_CryopodSevereSickness>chance for severe netrunning sickness</AV_SettingsSliderLabel_CryopodSevereSickness>
+	<AV_SettingsSliderDesc_MechDrop_CryopodSevereSickness>chance for netrunning to couse severe sickness. Gets checked roughtly every 2 hours of netrunning.</AV_SettingsSliderDesc_MechDrop_CryopodSevereSickness>
+	
+    <AV_SettingsSliderLabel_CryopodMildSickness>chance for mild netrunning sickness</AV_SettingsSliderLabel_CryopodMildSickness>
+	<AV_SettingsSliderDesc_MechDrop_CryopodMildSickness>chance for netrunning to couse mild sickness. Gets checked roughtly every 2 hours of netrunning.</AV_SettingsSliderDesc_MechDrop_CryopodMildSickness>
+
+	
+</LanguageData>

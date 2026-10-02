@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Neural Interface -->
+	<ThingDef ParentName="MechanitorImplantBase">	
+		<defName>AV_NeuralInterfaceImplant</defName>
+		<label>neural interface</label>
+		<description>A bionic implant which enables mechanitor to connect to a cryogenicpod enabling netrunning tasks. Does not work with basic mechlinks.</description>
+		<descriptionHyperlinks>
+		<HediffDef>AV_NeuralInterface</HediffDef>
+		<ThingDef>AV_Cryogenicpod</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>450</WorkToMake>
+			<Beauty>-4</Beauty>
+			<Mass>1</Mass>
+			<MarketValue>1000</MarketValue>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+			<color>(154,124,104)</color>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>AV_Cryopods</researchPrerequisite>
+			<recipeUsers>
+				<li>SubcoreEncoder</li>
+			</recipeUsers>
+		</recipeMaker>
+		<tradeTags>	
+			<li>AV_Mechtech_Implant</li>
+		</tradeTags>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+			<!-- <PowerfocusChip>1</PowerfocusChip> -->
+		</costList>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Usable">
+				<compClass>CompUsableImplant</compClass>
+				<useJob>UseItem</useJob>
+				<useLabel>Implant a neural port</useLabel>
+				<userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+			</li>
+			<li Class="CompProperties_UseEffectInstallImplant">
+				<hediffDef>AV_NeuralInterface</hediffDef>
+				<bodyPart>Brain</bodyPart>
+				<canUpgrade>false</canUpgrade>
+				<maxSeverity>2</maxSeverity>	<!-- not used by the game, change in HediffDef -->
+			</li>
+		</comps>
+		<tradeability>All</tradeability>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>AV_NeuralInterface</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<descriptionHyperlinks><ThingDef>AV_Cryogenicpod</ThingDef></descriptionHyperlinks>
+		<label>neural interface</label>
+		<description>An installed bionic implant that allows connection to a cryogenic pod.</description>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<isBad>false</isBad>
+		<removeOnRedressIfNotOfKind>
+			<li>Mechanitor</li>
+			<li>Mechanitor_Basic</li>
+		</removeOnRedressIfNotOfKind>
+		<priceImpact>true</priceImpact>
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="AV_Netrunning.HediffCompProperties_Cryogenicpod">
+				<compClass>AV_Netrunning.HediffComp_Cryogenicpod</compClass>
+				<hediff>AV_NeuralInterface</hediff>	
+				<researchhediff>AV_MechResearchDebuff</researchhediff>	
+				<maintenancehediff>AV_MechMaintenanceBoost</maintenancehediff>	
+				<mote>AV_Mote_MechSparkSimple</mote>
+			</li>
+		</comps>
+	</HediffDef> 
+	
+
+
+</Defs>

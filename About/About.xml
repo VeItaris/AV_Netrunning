@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>[AV] Netrunning</name>
+	<author>Veltaris</author>
+	<supportedVersions>
+		<li>1.5</li>
+    </supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>	
+		<li>
+			<packageId>Veltaris.Mechtech</packageId>
+			<displayName>[AV] Mechtech</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3061213617</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>brrainz.harmony</li>
+		<li>Veltaris.Framework</li>
+		<li>Veltaris.Mechtech</li>
+	</loadAfter>
+	<loadBefore>
+		
+	</loadBefore>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/ModIcon/AV_Mechtech</modIconPath>
+    <packageId>Veltaris.Netrunning</packageId>
+    <description>This is my love letter and content expansion for the mechanitor playstyle of the biotech DLC.</description>
+</ModMetaData>

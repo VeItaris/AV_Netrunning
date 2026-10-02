@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<WorkGiverDef>
+		<defName>AV_Netrunning</defName>
+		<label>netrunning</label>
+		<giverClass>AV_Netrunning.WorkGiver_Netrunning</giverClass>
+		<workType>Smithing</workType>
+		<verb>netrunning</verb>
+		<gerund>netrunning</gerund>
+		<priorityInType>200</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByMechs>false</canBeDoneByMechs>
+		<canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+	</WorkGiverDef>
+
+    <JobDef>
+		<defName>Netrunning</defName>
+		<driverClass>AV_Netrunning.JobDriver_Netrunning</driverClass>
+		<reportString>netrunning in a cryopod.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+		<alwaysShowWeapon>false</alwaysShowWeapon>
+    </JobDef>	
+
+
+</Defs>

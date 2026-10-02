@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\294100\\3302398123\\1.5\\Source\\AV_Netrunning\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB9D5701-7B01-4A8A-9A2C-957F40730E0F}|AV_Netrunning\\AV_Netrunning.csproj|c:\\program files (x86)\\steam\\steamapps\\workshop\\content\\294100\\3302398123\\1.5\\source\\av_netrunning\\av_netrunning\\comps_hediff\\hediffcomp_cryogenicpod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB9D5701-7B01-4A8A-9A2C-957F40730E0F}|AV_Netrunning\\AV_Netrunning.csproj|solutionrelative:av_netrunning\\comps_hediff\\hediffcomp_cryogenicpod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HediffComp_Cryogenicpod.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\294100\\3302398123\\1.5\\Source\\AV_Netrunning\\AV_Netrunning\\Comps_Hediff\\HediffComp_Cryogenicpod.cs",
+              "RelativeDocumentMoniker": "AV_Netrunning\\Comps_Hediff\\HediffComp_Cryogenicpod.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\294100\\3302398123\\1.5\\Source\\AV_Netrunning\\AV_Netrunning\\Comps_Hediff\\HediffComp_Cryogenicpod.cs",
+              "RelativeToolTip": "AV_Netrunning\\Comps_Hediff\\HediffComp_Cryogenicpod.cs",
+              "ViewState": "AgIAAPwAAAAAAAAAAADwv+8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T16:01:42.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

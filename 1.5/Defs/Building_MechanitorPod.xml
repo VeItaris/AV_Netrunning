@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- mechanitor pod -->
+	<ThingDef ParentName="BedWithQualityBase">	<!-- BedWithQualityBase  FurnitureBase-->
+		<defName>AV_Cryogenicpod</defName>
+		<label>Cryogenic pod</label>
+		<description>A neutroamine-filled capsule designed specifically for mechanitors to remotely maintain and control their mechanoids via a neural interface implant. It requires power and and minimises bodily functions, while providing a port which connects to an installed neural interface. The cooling neutroamine needs to be replenished after a certain period of time. Excessive netrunning can lead to health issues. \n \nMechanitors with a neural interface can perform the following manual tasks map-wide: \n- Connect to a friendly mech \n- Disconnect from a controlled mech \n- Draft and control assigned mechs \n- Remote repair (requires an implant) \n- Remote shielding (requires an implant) \n \nMechanitors with a neural interface can perform the following automated netrunning tasks while in the pod, depending on their settings: \n- Maintenance: Slight performance increase for all of the mechanitor's mechs \n- Combat: Remotely repair and shield mechs  \n- Repair only: Repair mechs remotely \n- Research: Utilises a part the processing power of the mechanitor's mechs to research</description>
+		<descriptionHyperlinks>
+			<ThingDef>AV_NeuralInterfaceImplant</ThingDef>
+			<HediffDef>AV_NeuralInterface</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Building/Cryopod/AV_Cryopod</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<uiIconScale>0.90</uiIconScale>	
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<castEdgeShadows>True</castEdgeShadows>
+		<drawGUIOverlay>false</drawGUIOverlay>	<!-- allows assignment overlay	-->
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2010</uiOrder>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>2800</WorkToBuild> 
+			<Mass>35</Mass>
+			<Flammability>1.0</Flammability>
+			<BedRestEffectiveness>0.1</BedRestEffectiveness>
+			<Comfort>0.20</Comfort>
+			<ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+			<MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+			<SurgerySuccessChanceFactor>1.1</SurgerySuccessChanceFactor>
+			<BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">2</BirthRitualQualityOffset>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VitalsMonitor</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+	  		<li Class="CompProperties_Power">
+			    <compClass>CompPowerTrader</compClass>				
+				<transmitsPower>false</transmitsPower>
+				<basePowerConsumption>250</basePowerConsumption>	
+				<!-- <idlePowerDraw>250</idlePowerDraw> -->			<!-- always considered idle from game -->	
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>2.0</fuelConsumptionRate>		<!-- per day -->
+				<fuelCapacity>20.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>0</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
+				<initialConfigurableTargetFuelLevel>20</initialConfigurableTargetFuelLevel>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<modExtensions>
+            <li Class="AV_Netrunning.ModExtension_Cryopod">
+                <isCryopod>true</isCryopod>
+            </li>
+        </modExtensions>
+		<size>(1,2)</size>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>120</costStuffCount>
+		<costList>
+			<Plasteel>40</Plasteel>
+			<Silver>200</Silver>
+			<PowerfocusChip>1</PowerfocusChip>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<building>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<bed_healPerDay>10</bed_healPerDay>
+			<bed_defaultMedical>false</bed_defaultMedical>
+			<buildingSizeCategory>Small</buildingSizeCategory>
+			<paintable>true</paintable>
+		</building>
+		<tradeTags Inherit='False'>	
+			<li>AV_Mechtech_Spacer</li>
+			<li>AV_Mechtech</li>
+		</tradeTags>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.17</staticSunShadowHeight>
+		<designationHotKey>Misc5</designationHotKey>
+		<researchPrerequisites>
+			<li>AV_Cryopods</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+	
+	<!-- research debuff-->
+	<HediffDef>
+		<defName>AV_MechResearchDebuff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<descriptionHyperlinks><ThingDef>AV_Cryogenicpod</ThingDef></descriptionHyperlinks>
+		<label>processing for research</label>
+		<description>this mechs overseer is using a bit of this mechs processing power to research.</description>
+		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<initialSeverity>0.01</initialSeverity>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1000~1500</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.01</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0.8</setMax>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.8</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef> 
+	
+	<!-- maintenance boost -->
+	<HediffDef>
+		<defName>AV_MechMaintenanceBoost</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<descriptionHyperlinks><ThingDef>AV_Cryogenicpod</ThingDef></descriptionHyperlinks>
+		<label>well maintained systems</label>
+		<description>this mechs systems are well maintained by an overseer.</description>
+		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<initialSeverity>0.01</initialSeverity>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000~120000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<!-- add class to purge old connection data -->
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.01</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.10</postFactor>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>1.10</postFactor>
+					</li>
+				</capMods>				
+				<statOffsets>
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+				</statOffsets>
+				<statFactors>
+					<ShootingAccuracyPawn>1.05</ShootingAccuracyPawn>
+					<MechEnergyUsageFactor>0.95</MechEnergyUsageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef> 
+	
+</Defs>

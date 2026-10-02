@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- cryopods -->	
+	<ResearchProjectDef>
+		<defName>AV_Cryopods</defName>
+		<label>cryopods</label>
+		<tab>AV_Research</tab>
+		<techLevel>Ultra</techLevel>
+		<description>Use advanced cryopods to control and manipulate your mechanoids from afar.</description>
+			<!-- <techprintCount>1</techprintCount>
+		<techprintCommonality>3</techprintCommonality> 			like CataphractArmor
+		<techprintMarketValue>2500</techprintMarketValue> -->	
+		<!-- below gets patched with loadorders, otherwise errors out	
+		<heldByFactionCategoryTags MayRequire="Ludeon.RimWorld.Royalty">
+			<li>Empire</li>
+			<li>Outlander</li>
+		</heldByFactionCategoryTags>	 -->
+		<baseCost>3000</baseCost>
+		<prerequisites>
+			<li>AV_Mechlinks</li>
+			<!--
+			<li>AV_Mechanoidhacking</li>
+			<li>AV_Biotuning</li>
+			<li>HighMechtech</li>  -->
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>6</researchViewX>
+		<researchViewY>1.7</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->cryopods</li>
+				<li>subject_story->visited a mechanoid driven glitterworld</li>
+				<li>subject_story->experimented with mechanoid tech</li>
+				<li>subject_gerund->worked in a glitterworld research facility to improve living standards</li>
+				<li>subject_gerund->advancing mechlinks</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+	
+
+</Defs>
